@@ -1,13 +1,78 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+:root {
+  --body-bg: rgba(0, 0, 0, 0.9);
+  --quote-box-bg: #fff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Noto Sans', sans-serif;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--body-bg);
+}
+
+#quote-box {
+  max-width: 500px;
+  border-radius: 3px;
+  margin: 0 2rem;
+  padding: 2rem;
+  background: var(--quote-box-bg);
+}
+
+#quote-text i {
+  margin-right: 0.4em;
+}
+
+#quote-text {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#author {
+  display: flex;
+  padding: 1.5em 0;
+  justify-content: flex-end;
+  opacity: 0.9;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  opacity: 1;
+}
+
+#tweet-quote {
+  color: var(--quote-box-bg);
+  background: var(--body-bg);
+  font-size: 0.8em;
+  padding: 0.2em 0.4em;
+  border: none;
+  border-radius: 3px;
+}
+
+#tweet-quote:hover {
+  opacity: 0.9;
+}
+
+#new-quote {
+  outline: none;
+  border: none;
+  background: var(--body-bg);
+  color: var(--quote-box-bg);
+  padding: 0.6rem 1rem;
+  border-radius: 3px;
+}
+
+#new-quote:hover {
+  cursor: pointer;
+  opacity: 0.9;
 }
